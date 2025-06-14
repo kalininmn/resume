@@ -1,0 +1,210 @@
+.chip.vue {
+	background-color: #35495e;
+	color: #42b883;
+	/* box-shadow: 0 0 3px 1px currentColor; */
+}
+.chip.vuelidate {
+	background-color: #35495e;
+	color: #42b883;
+	/* box-shadow: 0 0 3px 1px currentColor; */
+}
+.chip.vuetify {
+	background-color: rgba(33, 148, 243, .6);
+	color: #2194f3;
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.pinia {
+	background-color: #50ad59;
+	color: #ffc73b;
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.casl {
+	background-color: #fff;
+	color: #000;
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.css {
+	background-color: #27a3d9;
+	color: #fff;
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.sass {
+	background-color: #c76395;
+	color: #fff;
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.js {
+	background-color: #f7de1e;
+	color: #000;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.ts {
+	background-color: #3178c6;
+	color: #fff;
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.jsx {
+	background: linear-gradient(.30turn, #eed849 55%, #8651a3 45%);
+	/* color: #fff; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.jsx .chip__text:first-child {
+	color: #2e302d;
+	/* font-weight: 500; */
+}
+.chip.jsx .chip__text:last-child {
+	padding-left: 5px;
+}
+.chip.tsx {
+	background: linear-gradient(.30turn, #3178c6 55%, #8651a3 45%);
+	color: #fff;
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+/* .chip.tsx .chip__text:first-child {
+	color: #2e302d;
+} */
+.chip.tsx .chip__text:last-child {
+	padding-left: 5px;
+}
+.chip.webpack {
+	background-color: #1a75bb;
+	color: #8acff3;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.vite {
+	background: linear-gradient(100deg, #56aff8, #9d57f7);
+	/* background-color: #9d57f7; */
+	color: #f8c420;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.git {
+	background-color: #eb4d31;
+	/* color: #3f2e00; */
+	color: #fff;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.gitlab {
+	/* background: linear-gradient(); */
+	background: 
+   linear-gradient(to bottom, #db4127 40%, transparent 60%),
+   linear-gradient(to right, #f5680d 20%, transparent 60%),
+	 linear-gradient(to left, #f5680d 20%, transparent 60%),
+   linear-gradient(to top, #f89a1a 40%, transparent 60%);
+ 		/* background-size: 100% 20%, 20% 100%, 100% 20%; */
+ 		/* background-repeat: no-repeat; */
+ 		/* background-position: center; */
+	/* background-color: #1a75bb; */
+	/* color: #161220; */
+	color: #fff;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.docker {
+	background-color: #1d60e7;
+	color: #f8f8f8;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.cicd {
+	background: linear-gradient(0.30turn, #f86405 44%, #f8a30d 44%);
+	/* background-color: #1a75bb; */
+	color: #fff;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.nodejs {
+	background: linear-gradient(0.30turn, #73af5b 40%, #3b813b 60%);
+	/* background-color: #1a75bb; */
+	color: #333333;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.expressjs {
+	background: linear-gradient(0.30turn, #73af5b 40%, #3b813b 60%);
+	/* background-color: #1a75bb; */
+	color: #333333;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.postgresql {
+	background-color: #32648d;
+	color: #f8f8f8;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.mongodb {
+	background: linear-gradient(0.30turn, #0ea54d 40%, #118e4d 60%);
+	color: #20303a;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.mysql {
+	background: linear-gradient(90deg, #00728b 43%, #eb8d0f 43%);
+	/* color: #20303a; */
+	color: #f8f8f8;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.redis {
+	background: linear-gradient(#d22b1e 30%, #9f1d0f 70%);
+	/* color: #20303a; */
+	color: #f8f8f8;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.nginx {
+	/* background: linear-gradient(#d22b1e 30%, #9f1d0f 70%); */
+	background-color: #009139;
+	/* color: #20303a; */
+	color: #f7f7f7;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.sequelize {
+	background: linear-gradient(90deg, #00abe9 10%, #2276b8 40%, #2d3e67);
+	/* background-color: #009139; */
+	/* color: #20303a; */
+	color: #f7f7f7;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.figma {
+	background: 
+		linear-gradient(
+			to right,
+			#f24e1e 20%, #ff7262 40%,
+			#a259ff 60%, #1abcfe 80%,
+			#0acf83
+		);
+	/* background-color: #009139; */
+	/* color: #20303a; */
+	color: #f7f7f7;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.vault {
+	background-color: #ffd814;
+	/* color: #20303a; */
+	color: #000000;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.harbor {
+	background: linear-gradient(90deg, #5db13d, #52a432);
+	/* background-color: #52a432; */
+	/* color: #20303a; */
+	color: #f3f5f8;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}
+.chip.passwork {
+	background-color: #2c82c9;
+	/* color: #20303a; */
+	color: #ffffff;
+	/* font-weight: 500; */
+	/* box-shadow: 0px 0px 3px 1px currentColor; */
+}

@@ -1,0 +1,32 @@
+.row {
+	display: flex;
+	margin: 40px 0;
+}
+.row .col {
+	flex: 1 1 auto;
+}
+.col {
+	padding: 10px;
+}
+/* .col.col-50 {
+	flex-basis: 50%;
+} */
+.row .divider {
+	flex: 0 0 auto;
+}
+
+.d-flex {
+	display: flex;
+}
+/* .justify-center {
+	justify-content: center;
+} */
+.justify-start {
+	justify-content: start;
+}
+.justify-end {
+	justify-content: end;
+}
+.align-center {
+	align-items: center;
+}

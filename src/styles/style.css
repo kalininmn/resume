@@ -1,0 +1,132 @@
+/* Fonts */
+@font-face {
+	font-family: Montserrat;
+	font-weight: 400;
+	src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf) format('truetype');
+}
+/* --- */
+
+/* Reset */
+body {
+	margin: 40px 20px;
+	/* padding: ; */
+	background: #000;
+	/* background: yellow; */
+	color: #fff;
+	font-family: Montserrat, sans-serif;
+}
+/* --- */
+
+article {
+	padding: 40px 20px 80px;
+}
+
+.divider {
+	height: 1px;
+	width: 100%;
+	background: #fff;
+}
+.divider.vertical {
+	height: auto !important;
+	width: 1px !important;
+}
+
+.chip {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	--x: 0;
+  --y: 0;
+	min-width: 50px;
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 5px;
+	/* letter-spacing: .5px; */
+}
+.chip::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: radial-gradient(circle, rgb(255, 255, 255, .2), transparent);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-out;
+	left: var(--x);
+  top: var(--y);
+}
+.chip:hover::before {
+  opacity: 1;
+  width: 200%;
+  height: 200%;
+}
+
+/* Person */
+.person {
+	/* display: flex; */
+	/* flex-wrap: wrap; */
+	max-width: 1920px;
+	margin: 0 auto;
+}
+/* .avatar-section,
+.person-info-section {
+	flex: 1 1 auto;
+} */
+/* .avatar-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} */
+/* .person-info-section {
+	display: flex;
+	align-items: center;
+} */
+.avatar {
+	width: fit-content;
+	border: 2px solid white;
+	padding: 5px;
+}
+.avatar__picture {
+	display: block;
+}
+.avatar,
+.avatar__picture img {
+	border-radius: 50%;
+}
+.avatar__picture img {
+	display: block;
+	/* padding: 5px; */
+	width: 200px;
+	height: 200px;
+}
+/* --- */
+
+/* Stack */
+.stack {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.stack-item {
+	padding: 20px;
+	min-height: 200px;
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+}
+/* .stack__img {
+	width: 42px;
+} */
+/* --- */
+
+/* Links */
+.links {
+	max-width: 500px;
+	margin: 0 auto;
+}
+.links__wrapper {
+	text-align: center;
+}
+/* --- */
