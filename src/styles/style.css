@@ -17,9 +17,9 @@ body {
 }
 /* --- */
 
-article {
+/* article {
 	padding: 40px 20px 80px;
-}
+} */
 
 .divider {
 	height: 1px;
@@ -63,6 +63,13 @@ article {
   width: 200%;
   height: 200%;
 }
+
+/* .container__title {
+	width: 100%;
+} */
+/* .container__title .title {
+	text-align: center;
+} */
 
 /* Person */
 .person {
