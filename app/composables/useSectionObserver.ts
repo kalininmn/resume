@@ -17,9 +17,11 @@ export function useSectionObserver(
   // const sectionsList = ["experience", "skills", "projects", "contacts"];
 
   onMounted(() => {
+    const sectionWeakMap = new WeakMap();
+
     const options: IntersectionObserverInit = {
       root: null,
-      rootMargin: "0px 0px -70% 0px",
+      rootMargin: "0px 0px -40% 0px",
       threshold: 0.1,
     };
 
@@ -29,18 +31,16 @@ export function useSectionObserver(
       if (visibleEntries.length > 0) {
         // Берем ID последнего видимого элемента
         const lastEntry = visibleEntries.at(-1);
-        console.log(lastEntry);
-        // activeSection.value = currentId;
+        activeSection.value = sectionWeakMap.get(lastEntry?.target);
       }
     };
 
     observer = new IntersectionObserver(handleObserver, options);
 
     function observe() {
-      // Добавляем наблюдение сразу здесь:
       sectionRefs.forEach((ref) => {
-        if (ref.value?.$el) {
-          console.log(ref.value.refName);
+        if (ref.value.$el) {
+          sectionWeakMap.set(ref.value.$el, ref.value.refName)
           observer!.observe(ref.value.$el);
         }
       });

@@ -19,6 +19,11 @@ html {
   scroll-padding-top: 100px;
 }
 body {
-  padding: 20px 80px 80px;
+  padding: 40px 20px 20px;
+  /* padding: 20px 80px 80px; */
   background-color: #000615;
 }
+
+/* span {
+  font-size: var(--text-base);
+} */

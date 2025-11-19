@@ -1,5 +1,5 @@
 <template>
-  <div class="header flex mb-4">
+  <div class="header flex flex-col mb-4">
     <div class="header__info">
       <div class="mb-3">
         <slot name="append" />
@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div class="ml-auto text-[#A3A3A3]">
+    <div class="order-first md:ml-auto text-[#A3A3A3]">
       <slot name="prepend" />
     </div>
   </div>

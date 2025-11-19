@@ -1,5 +1,5 @@
 <template>
-  <div class="photo w-[360px] h-[320px] rounded-3xl">
+  <div class="photo w-[140px] h-[140px] xl:w-[360px] xl:h-[320px] rounded-3xl">
     <div class="photo__wrapper w-full h-full rounded-3xl overflow-hidden">
       <img
         class="w-full h-full object-cover object-center"
@@ -20,8 +20,10 @@
     position: absolute;
     z-index: -1;
     content: "";
-    width: 325px;
-    height: 275px;
+    // width: 325px;
+    // height: 275px;
+    width: 100%;
+    height: 75%;
     opacity: 0.5;
     border-radius: 50%;
     backdrop-filter: blur(400px);

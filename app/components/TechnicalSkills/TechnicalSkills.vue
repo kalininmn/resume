@@ -1,6 +1,17 @@
 <template>
   <div>
-    <div class="navigator w-fit mx-auto grid gap-x-[12px] mb-15">
+    <div
+      class="
+      navigator
+      w-fit
+      mx-auto
+      grid
+      grid-cols-2
+      gap-[12px]
+      md:grid-cols-4
+      md:gap-x-[12px]
+      mb-15"
+    >
       <NavigatorItem
         label="Frontend"
         :actived="activeTab === SideList.Frontend"
@@ -32,63 +43,63 @@
 </template>
 
 <script setup lang="ts">
-import NavigatorItem from "./NavigatorItem.vue";
-import SkillItems from "./SkillItems.vue";
+import NavigatorItem from './NavigatorItem.vue';
+import SkillItems from './SkillItems.vue';
 
 const enum SideList {
-  "Frontend" = "frontend",
-  "Backend" = "backend",
-  "Tools" = "tools",
-  "Other" = "other",
+  Frontend = 'frontend',
+  Backend = 'backend',
+  Tools = 'tools',
+  Other = 'other',
 }
 
 const activeTab = ref<SideList>(SideList.Frontend);
 
 const Sides: Record<SideList, { label: string; class: string }[]> = {
   [SideList.Frontend]: [
-    { label: "Vue", class: "vue" },
-    { label: "Vuelidate", class: "vuelidate" },
-    { label: "Vuetify", class: "vuetify" },
-    { label: "Pinia", class: "pinia" },
-    { label: "CASL", class: "casl" },
-    { label: "CSS", class: "css" },
-    { label: "SCSS", class: "scss" },
-    { label: "JS", class: "js" },
-    { label: "TS", class: "ts" },
-    { label: "JSX", class: "jsx" },
-    { label: "TSX", class: "tsx" },
+    { label: 'Vue', class: 'vue' },
+    { label: 'Vuelidate', class: 'vuelidate' },
+    { label: 'Vuetify', class: 'vuetify' },
+    { label: 'Pinia', class: 'pinia' },
+    { label: 'CASL', class: 'casl' },
+    { label: 'CSS', class: 'css' },
+    { label: 'SCSS', class: 'scss' },
+    { label: 'JS', class: 'js' },
+    { label: 'TS', class: 'ts' },
+    { label: 'JSX', class: 'jsx' },
+    { label: 'TSX', class: 'tsx' },
   ],
   [SideList.Backend]: [
-    { label: "Node.js", class: "nodejs" },
-    { label: "Express.js", class: "expressjs" },
-    { label: "PostgreSQL", class: "postgresql" },
-    { label: "MongoDB", class: "mongodb" },
-    { label: "MySQL", class: "mysql" },
-    { label: "Redis", class: "redis" },
-    { label: "Nginx", class: "nginx" },
-    { label: "Sequlize", class: "sequelize" },
+    { label: 'Node.js', class: 'nodejs' },
+    { label: 'Express.js', class: 'expressjs' },
+    { label: 'PostgreSQL', class: 'postgresql' },
+    { label: 'MongoDB', class: 'mongodb' },
+    { label: 'MySQL', class: 'mysql' },
+    { label: 'Redis', class: 'redis' },
+    { label: 'Nginx', class: 'nginx' },
+    { label: 'Sequlize', class: 'sequelize' },
   ],
   [SideList.Tools]: [
-    { label: "Webpack", class: "webpack" },
-    { label: "Vite", class: "vite" },
-    { label: "Git", class: "git" },
-    { label: "Gitlab", class: "gitlab" },
-    { label: "Docker", class: "docker" },
-    { label: "CI/CD", class: "cicd" },
+    { label: 'Webpack', class: 'webpack' },
+    { label: 'Vite', class: 'vite' },
+    { label: 'Git', class: 'git' },
+    { label: 'Gitlab', class: 'gitlab' },
+    { label: 'Docker', class: 'docker' },
+    { label: 'CI/CD', class: 'cicd' },
   ],
   [SideList.Other]: [
-    { label: "Figma", class: "figma" },
-    { label: "Vault", class: "vault" },
-    { label: "Harbor", class: "harbor" },
-    { label: "Passwork", class: "passwork" },
+    { label: 'Figma', class: 'figma' },
+    { label: 'Vault', class: 'vault' },
+    { label: 'Harbor', class: 'harbor' },
+    { label: 'Passwork', class: 'passwork' },
   ],
 };
 </script>
 
 <style lang="scss" scoped>
-.navigator {
-  grid-template-columns: repeat(4, min-content);
-}
+// .navigator {
+//   grid-template-columns: repeat(4, min-content);
+// }
 
 :deep() {
   .vue {
