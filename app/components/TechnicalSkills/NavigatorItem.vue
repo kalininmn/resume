@@ -16,15 +16,18 @@ const props = defineProps({
 });
 
 const classes = computed(() => [
-  "w-fit",
-  "py-1",
-  "px-2",
-  "rounded-md",
-  "shadow-[0px 1px 3px 0px #0000001A]",
-  "text-sm",
-  "text-[#FAFAFA]",
-  props.actived ? "bg-[#3A7BFF]" : "bg-[#3C3C4399]",
-  "cursor-pointer",
-  "pointer-events-auto",
+  // 'w-fit',
+  'px-[20px]',
+  'py-[10px]',
+  'rounded-[8px]',
+  'shadow-lg',
+  'shadow-blue-500/20',
+  'text-sm',
+  props.actived ? 'text-white' : 'text-neutral-400',
+  'font-medium',
+  props.actived ? 'bg-[#3A7BFF]' : 'bg-neutral-800',
+  'hover:bg-neutral-700',
+  'cursor-pointer',
+  'pointer-events-auto',
 ]);
 </script>

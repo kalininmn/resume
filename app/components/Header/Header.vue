@@ -1,21 +1,28 @@
 <template>
   <div
     class="
-    hidden
+    box-border
+    rounded-b-[8px]
+    bg-neutral-950/95
+    backdrop-blur-sm
+    shadow-[0_4px_24px_rgba(0,0,0,0.4)]
+    z-50
     fixed
-    top-[40px]
-    left-[20px]
-    right-[20px]
-    md:top-[20px]
-    md:left-[80px]
-    md:right-[80px]
+    top-0
+		left-0
+		right-0
+		sm:rounded-[8px]
+    sm:top-[20px]
+    sm:left-auto
+    sm:right-[20px]
+		md:right-[40px]
+		xl:right-[80px]
     flex
     justify-center
     align-center
-    bg-[#000615]"
+		"
   >
-    <span class="font-sans font-normal text-lg lg:text-xl text-white">Resume</span>
-    <Navbar class="w-fit ml-auto p-1" />
+    <Navbar class="w-fit mx-auto sm:ml-auto sm:mr-0 p-1" />
   </div>
 </template>
 

@@ -1,59 +1,63 @@
 <template>
-  <Header />
-  <!-- mt-32.5 Need add auto getting Header height for css properties -->
-  <AboutMe class="mt-17 mb-40 md:mt-40.5 md:mb-46.5" />
+  <div class="mx-auto max-w-[1920px]">
+    <Header />
+    <!-- mt-32.5 Need add auto getting Header height for css properties -->
+    <AboutMe class="mt-30.5 mb-40 md:mt-45.5 md:mb-46.5" />
 
-  <SectionHeader
-    :ref="Sections.Experience"
-    :ref-name="Sections.Experience"
-    class="mb-10"
-    title="Опыт работы"
-    description="Профессиональный путь в разработке веб-приложений"
-  />
-  <Experience
-    v-for="(item, index) in experienceItems"
-    :data="item"
-    :class="index < experienceItems.length - 1 ? 'mb-5' : 'mb-25'"
-  />
+    <SectionHeader
+      :ref="Sections.Experience"
+      :ref-name="Sections.Experience"
+      class="mb-10"
+      title="Опыт работы"
+      description="Профессиональный путь в разработке веб-приложений"
+    />
+    <Experience
+      v-for="(item, index) in experienceItems"
+      :data="item"
+      :class="index < experienceItems.length - 1 ? 'mb-5' : 'mb-25'"
+    />
 
-  <SectionHeader
-    :ref="Sections.Skills"
-    :ref-name="Sections.Skills"
-    class="mb-10"
-    title="Технические навыки"
-    description="Широкий спектр современных технологий и инструментов разработки"
-  />
-  <TechnicalSkills class="mb-23.5" />
+    <SectionHeader
+      :ref="Sections.Skills"
+      :ref-name="Sections.Skills"
+      class="mb-10"
+      title="Технические навыки"
+      description="Широкий спектр современных технологий и инструментов разработки"
+    />
+    <TechnicalSkills class="mb-23.5" />
 
-  <SectionHeader
-    :ref="Sections.Projects"
-    :ref-name="Sections.Projects"
-    class="mb-10"
-    title="Проекты и задачи"
-    description="Ключевые проекты и зоны ответственности"
-  />
-  <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] mb-23.5">
-    <Projects v-for="item in projectItems" :data="item" />
+    <SectionHeader
+      :ref="Sections.Projects"
+      :ref-name="Sections.Projects"
+      class="mb-10"
+      title="Проекты и задачи"
+      description="Ключевые проекты и зоны ответственности"
+    />
+    <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] mb-23.5">
+      <Projects v-for="item in projectItems" :data="item" />
+    </div>
+
+    <div>
+      <SectionHeader
+        :ref="Sections.Contacts"
+        :ref-name="Sections.Contacts"
+        class="mb-10"
+        title="Контакты"
+        description="Открыт для новых проектов и сотрудничества. Свяжитесь со мной для обсуждения проекта."
+      />
+      <div class="flex justify-center flex-wrap gap-5 mb-25 text-center">
+        <Link :icon="MailIcon" text="Email" />
+        <Link :icon="GithubIcon" text="GitHub" />
+        <Link :icon="TelegramIcon" text="Telegram" />
+      </div>
+      <p class="block text-center text-[#A3A3A3]">
+        © 2025 Kalinin MN. Все права защищены.
+      </p>
+      <p class="block text-center text-[#A3A3A3]">
+        Design by <a class="underline" href="#">Lazsido</a>
+      </p>
+    </div>
   </div>
-
-  <SectionHeader
-    :ref="Sections.Contacts"
-    :ref-name="Sections.Contacts"
-    class="mb-10"
-    title="Контакты"
-    description="Открыт для новых проектов и сотрудничества. Свяжитесь со мной для обсуждения проекта."
-  />
-  <div class="flex justify-center flex-wrap gap-5 mb-25 text-center">
-    <Link :icon="MailIcon" text="Email" />
-    <Link :icon="GithubIcon" text="GitHub" />
-    <Link :icon="TelegramIcon" text="Telegram" />
-  </div>
-  <p class="block text-center text-[#A3A3A3]">
-    © 2025 Kalinin MN. Все права защищены.
-  </p>
-  <p class="block text-center text-[#A3A3A3]">
-    Design by <a class="underline" href="#">Lazsido</a>
-  </p>
 </template>
 
 <script setup lang="ts">

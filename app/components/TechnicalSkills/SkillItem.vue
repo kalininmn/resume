@@ -14,9 +14,9 @@ const classes = computed(() => [
   "w-fit",
   "inline-block",
   "py-1",
-  "px-3",
+  "px-4",
   "rounded-lg",
   props.class,
-  "text-xs",
+  "text-base",
 ]);
 </script>

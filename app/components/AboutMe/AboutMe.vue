@@ -1,15 +1,17 @@
 <template>
   <div
     class="
+    mx-auto
     flex
     flex-col
     items-center
     md:flex-row
-    md:justify-between
     md:items-start
-    md:justify-around"
+    md:justify-around
+    md:max-w-5xl
+    "
   >
-    <div class="md:max-w-sm lg:max-w-lg">
+    <div class="md:max-w-sm lg:max-w-md">
       <StatusBadge class="mb-5" opened />
       <p class="mb-2 text-sm lg:text-base text-[#A3A3A3]">
         Привет, меня зовут <span class="text-[#fafafa]">Максим Калинин</span>
@@ -56,7 +58,7 @@
       </div>
     </div>
 
-    <MePhoto class="mb-3 order-first md:order-last md:mb-0" />
+    <MePhoto class="order-first md:order-last md:mb-0" />
   </div>
 </template>
 

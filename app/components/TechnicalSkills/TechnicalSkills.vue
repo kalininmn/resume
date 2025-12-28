@@ -1,17 +1,6 @@
 <template>
   <div>
-    <div
-      class="
-      navigator
-      w-fit
-      mx-auto
-      grid
-      grid-cols-2
-      gap-[12px]
-      md:grid-cols-4
-      md:gap-x-[12px]
-      mb-15"
-    >
+    <div class="navigator w-fit mx-auto grid gap-[12px] mb-15">
       <NavigatorItem
         label="Frontend"
         :actived="activeTab === SideList.Frontend"
@@ -97,9 +86,17 @@ const Sides: Record<SideList, { label: string; class: string }[]> = {
 </script>
 
 <style lang="scss" scoped>
-// .navigator {
-//   grid-template-columns: repeat(4, min-content);
-// }
+.navigator {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .navigator {
+    grid-template-columns: repeat(4, min-content);
+  }
+}
 
 :deep() {
   .vue {

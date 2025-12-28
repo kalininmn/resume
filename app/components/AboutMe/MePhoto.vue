@@ -1,11 +1,11 @@
 <template>
-  <div class="photo w-[140px] h-[140px] xl:w-[360px] xl:h-[320px] rounded-3xl">
-    <div class="photo__wrapper w-full h-full rounded-3xl overflow-hidden">
+  <div class="photo">
+    <div class="photo__wrapper w-[140px] h-[140px] lg:w-[200px] lg:h-[200px]">
       <img
-        class="w-full h-full object-cover object-center"
+        class="w-full h-full object-cover object-center rounded-3xl"
         src="/photo.jpeg"
         alt=""
-      />
+      >
     </div>
   </div>
 </template>
@@ -14,6 +14,17 @@
 
 <style lang="scss" scoped>
 .photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--size) + (var(--size)*.5) * 2);
+  height: calc(var(--size) + (var(--size)*.2) * 2);
+  --size: 140px;
+  @media (min-width: 1024px) {
+    --size: 200px;
+  }
+}
+.photo__wrapper {
   position: relative;
   &::before,
   &::after {

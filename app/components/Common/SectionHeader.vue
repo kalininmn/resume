@@ -1,8 +1,8 @@
 <template>
   <div class="w-full text-center">
-    <span class="block font-semibold text-[#FAFAFA] mb-2">
-      {{ props.title }}</span
-    >
+    <span class="block text-3xl text-[#FAFAFA] mb-2">
+      {{ props.title }}
+    </span>
     <span class="block text-[#A3A3A3]">{{ props.description }}</span>
   </div>
 </template>
@@ -15,10 +15,10 @@ const props = withDefaults(
     refName?: string;
   }>(),
   {
-    title: "",
-    description: "",
-    refName: "",
-  }
+    title: '',
+    description: '',
+    refName: '',
+  },
 );
 
 defineExpose({
