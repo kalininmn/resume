@@ -8,11 +8,11 @@
 
 <script setup lang="ts">
 withDefaults(
-	defineProps<{
-		title?: string;
-	}>(),
-	{
-		title: '',
-	}
+  defineProps<{
+    title?: string;
+  }>(),
+  {
+    title: '',
+  },
 );
 </script>

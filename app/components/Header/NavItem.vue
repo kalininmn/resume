@@ -6,7 +6,7 @@
 const props = defineProps({
   label: {
     type: String,
-    default: "",
+    default: '',
   },
   actived: {
     type: Boolean,
@@ -15,12 +15,13 @@ const props = defineProps({
 });
 
 const classes = computed(() => [
-  "py-1",
-  "px-2",
-  "cursor-pointer",
-  "pointer-events-auto",
-  "font-medium",
-  "text-sm",
-  props.actived ? "text-[#3A7BFF]" : "text-[#FAFAFA]",
+  'py-1',
+  'px-2',
+  'cursor-pointer',
+  'pointer-events-auto',
+  'font-medium',
+  'text-sm',
+  'inline-block',
+  props.actived ? 'text-[#3A7BFF]' : 'text-[#FAFAFA]',
 ]);
 </script>

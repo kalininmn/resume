@@ -1,32 +1,30 @@
 <template>
-  <div>
+  <div ref="techSkillsRef">
     <div class="navigator w-fit mx-auto grid gap-[12px] mb-15">
       <NavigatorItem
         label="Frontend"
         :actived="activeTab === SideList.Frontend"
-        @click="activeTab = SideList.Frontend"
+        @click="setTab(SideList.Frontend)"
       />
       <NavigatorItem
         label="Backend"
         :actived="activeTab === SideList.Backend"
-        @click="activeTab = SideList.Backend"
+        @click="setTab(SideList.Backend)"
       />
       <NavigatorItem
         label="Инструменты"
         :actived="activeTab === SideList.Tools"
-        @click="activeTab = SideList.Tools"
+        @click="setTab(SideList.Tools)"
       />
       <NavigatorItem
         label="Прочее"
         :actived="activeTab === SideList.Other"
-        @click="activeTab = SideList.Other"
+        @click="setTab(SideList.Other)"
       />
     </div>
 
     <div class="min-h-[96px]">
-      <KeepAlive>
-        <SkillItems :key="activeTab" :items="Sides[activeTab]" />
-      </KeepAlive>
+      <SkillItems :items="Sides[activeTab]" :direction="direction" :active-tab="activeTab" />
     </div>
   </div>
 </template>
@@ -35,54 +33,109 @@
 import NavigatorItem from './NavigatorItem.vue';
 import SkillItems from './SkillItems.vue';
 
-const enum SideList {
+import { useAnimation } from '@/composables/useAnimation';
+
+const { fadeInUp } = useAnimation();
+
+enum SideList {
   Frontend = 'frontend',
   Backend = 'backend',
   Tools = 'tools',
   Other = 'other',
 }
 
+enum SideListMap {
+  frontend,
+  backend,
+  tools,
+  other,
+}
+
+const oldTab = ref<SideList>(SideList.Frontend);
 const activeTab = ref<SideList>(SideList.Frontend);
 
-const Sides: Record<SideList, { label: string; class: string }[]> = {
+function setTab(tab: SideList) {
+  oldTab.value = activeTab.value;
+  activeTab.value = tab;
+}
+
+const direction = computed(() =>
+  SideListMap[activeTab.value] > SideListMap[oldTab.value] ? 1 : -1,
+);
+
+const Sides: Record<SideList, { id: number; label: string; class: string }[]> = {
   [SideList.Frontend]: [
-    { label: 'Vue', class: 'vue' },
-    { label: 'Vuelidate', class: 'vuelidate' },
-    { label: 'Vuetify', class: 'vuetify' },
-    { label: 'Pinia', class: 'pinia' },
-    { label: 'CASL', class: 'casl' },
-    { label: 'CSS', class: 'css' },
-    { label: 'SCSS', class: 'scss' },
-    { label: 'JS', class: 'js' },
-    { label: 'TS', class: 'ts' },
-    { label: 'JSX', class: 'jsx' },
-    { label: 'TSX', class: 'tsx' },
+    [
+      { id: 1, label: 'Vue', class: 'vue' },
+      { id: 2, label: 'Vuelidate', class: 'vuelidate' },
+      { id: 3, label: 'Vuetify', class: 'vuetify' },
+      { id: 5, label: 'CASL', class: 'casl' },
+    ],
+    [
+      { id: 4, label: 'Pinia', class: 'pinia' },
+      { id: 6, label: 'CSS', class: 'css' },
+      { id: 7, label: 'SCSS', class: 'scss' },
+      { id: 8, label: 'JS', class: 'js' },
+    ],
+    [
+      { id: 9, label: 'TS', class: 'ts' },
+      { id: 10, label: 'JSX', class: 'jsx' },
+      { id: 11, label: 'TSX', class: 'tsx' },
+    ],
   ],
   [SideList.Backend]: [
-    { label: 'Node.js', class: 'nodejs' },
-    { label: 'Express.js', class: 'expressjs' },
-    { label: 'PostgreSQL', class: 'postgresql' },
-    { label: 'MongoDB', class: 'mongodb' },
-    { label: 'MySQL', class: 'mysql' },
-    { label: 'Redis', class: 'redis' },
-    { label: 'Nginx', class: 'nginx' },
-    { label: 'Sequlize', class: 'sequelize' },
+    [
+      { id: 12, label: 'Node.js', class: 'nodejs' },
+      { id: 13, label: 'Express.js', class: 'expressjs' },
+      { id: 14, label: 'PostgreSQL', class: 'postgresql' },
+    ],
+    [
+      { id: 15, label: 'MongoDB', class: 'mongodb' },
+      { id: 16, label: 'MySQL', class: 'mysql' },
+      { id: 17, label: 'Redis', class: 'redis' },
+    ],
+    [
+      { id: 18, label: 'Nginx', class: 'nginx' },
+      { id: 19, label: 'Sequlize', class: 'sequelize' },
+    ],
   ],
   [SideList.Tools]: [
-    { label: 'Webpack', class: 'webpack' },
-    { label: 'Vite', class: 'vite' },
-    { label: 'Git', class: 'git' },
-    { label: 'Gitlab', class: 'gitlab' },
-    { label: 'Docker', class: 'docker' },
-    { label: 'CI/CD', class: 'cicd' },
+    [
+      { id: 20, label: 'Webpack', class: 'webpack' },
+      { id: 21, label: 'Vite', class: 'vite' },
+      { id: 22, label: 'Git', class: 'git' },
+    ],
+    [
+      { id: 23, label: 'Gitlab', class: 'gitlab' },
+      { id: 24, label: 'Docker', class: 'docker' },
+    ],
+    [
+      { id: 25, label: 'CI/CD', class: 'cicd' },
+    ],
   ],
   [SideList.Other]: [
-    { label: 'Figma', class: 'figma' },
-    { label: 'Vault', class: 'vault' },
-    { label: 'Harbor', class: 'harbor' },
-    { label: 'Passwork', class: 'passwork' },
+    [
+      { id: 26, label: 'Figma', class: 'figma' },
+      { id: 27, label: 'Vault', class: 'vault' },
+    ],
+    [
+      { id: 28, label: 'Harbor', class: 'harbor' },
+    ],
+    [
+      { id: 29, label: 'Passwork', class: 'passwork' },
+    ],
   ],
 };
+
+const techSkillsRef = useTemplateRef('techSkillsRef');
+
+onMounted(() => {
+  fadeInUp(techSkillsRef.value, {
+    yDistance: 30,
+    duration: 0.5,
+    scroll: true,
+  });
+});
 </script>
 
 <style lang="scss" scoped>

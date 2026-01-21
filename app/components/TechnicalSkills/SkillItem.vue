@@ -1,22 +1,25 @@
 <template>
-  <span :class="classes">
+  <div :class="classes">
     {{ props.label }}
-  </span>
+  </div>
 </template>
 
 <script setup>
 const props = defineProps({
-  label: { type: String, default: "" },
-  class: { type: String, default: "" },
+  label: { type: String, default: '' },
+  class: { type: String, default: '' },
 });
 
 const classes = computed(() => [
-  "w-fit",
-  "inline-block",
-  "py-1",
-  "px-4",
-  "rounded-lg",
+  'w-fit',
+  'py-1',
+  'px-4',
+  'rounded-lg',
   props.class,
-  "text-base",
+  'text-base',
 ]);
 </script>
+
+<style>
+  
+</style>

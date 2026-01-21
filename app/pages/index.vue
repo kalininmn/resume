@@ -13,6 +13,8 @@
     />
     <Experience
       v-for="(item, index) in experienceItems"
+      :key="index"
+      :ref="el => setInstOfElement(el, index, experienceItemRefs)"
       :data="item"
       :class="index < experienceItems.length - 1 ? 'mb-5' : 'mb-25'"
     />
@@ -34,7 +36,12 @@
       description="Ключевые проекты и зоны ответственности"
     />
     <div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] mb-23.5">
-      <Projects v-for="item in projectItems" :data="item" />
+      <Projects
+        v-for="(item, index) in projectItems"
+        :key="index"
+        :ref="el => setInstOfElement(el, index, projectItemRefs)"
+        :data="item"
+      />
     </div>
 
     <div>
@@ -46,14 +53,14 @@
         description="Открыт для новых проектов и сотрудничества. Свяжитесь со мной для обсуждения проекта."
       />
       <div class="flex justify-center flex-wrap gap-5 mb-25 text-center">
-        <Link :icon="MailIcon" text="Email" />
-        <Link :icon="GithubIcon" text="GitHub" />
-        <Link :icon="TelegramIcon" text="Telegram" />
+        <Link :ref="el => setElement(el, 0, contactItemRefs)" :icon="MailIcon" text="Email" class="link" />
+        <Link :ref="el => setElement(el, 1, contactItemRefs)" :icon="GithubIcon" text="GitHub" class="link" />
+        <Link :ref="el => setElement(el, 2, contactItemRefs)" :icon="TelegramIcon" text="Telegram" class="link" />
       </div>
-      <p class="block text-center text-[#A3A3A3]">
+      <p :ref="el => copyItemRefs[0] = el" class="block text-center text-[#A3A3A3]">
         © 2025 Kalinin MN. Все права защищены.
       </p>
-      <p class="block text-center text-[#A3A3A3]">
+      <p :ref="el => copyItemRefs[1] = el" class="block text-center text-[#A3A3A3]">
         Design by <a class="underline" href="#">Lazsido</a>
       </p>
     </div>
@@ -61,6 +68,9 @@
 </template>
 
 <script setup lang="ts">
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 import { onMounted, ref } from 'vue';
 import Header from '~/components/Header/Header.vue';
 import AboutMe from '~/components/AboutMe/AboutMe.vue';
@@ -75,7 +85,11 @@ import MailIcon from '@/assets/icons/mail.svg';
 import GithubIcon from '@/assets/icons/github.svg';
 import TelegramIcon from '@/assets/icons/telegram.svg';
 
+import { useAnimation } from '@/composables/useAnimation';
 import { Sections, useSectionObserver } from '@/composables/useSectionObserver';
+import { useRefs } from '@/composables/useRefs';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const experienceRef = useTemplateRef(Sections.Experience);
 const skillsRef = useTemplateRef(Sections.Skills);
@@ -83,6 +97,8 @@ const projectsRef = useTemplateRef(Sections.Projects);
 const contactsRef = useTemplateRef(Sections.Contacts);
 
 useSectionObserver([experienceRef, skillsRef, projectsRef, contactsRef]);
+const { setInstOfElement, setElement } = useRefs();
+const { staggerFadeInUp } = useAnimation();
 
 const experienceItems = [
   {
@@ -108,6 +124,11 @@ const experienceItems = [
   },
 ];
 
+const experienceItemRefs = ref([]);
+const projectItemRefs = ref([]);
+const contactItemRefs = ref([]);
+const copyItemRefs = ref([]);
+
 const projectItems = [
   {
     title: 'Банковский агрегатор систем',
@@ -130,4 +151,82 @@ const projectItems = [
     stack: ['Vue 3', 'TypeScript'],
   },
 ];
+
+onMounted(() => {
+  staggerFadeInUp(experienceItemRefs.value.map(x => x.$el), {
+    yDistance: 30,
+    duration: 0.5,
+    scroll: true,
+    onStart() {
+      const targetEl = this.targets()[0];
+      const component
+        = experienceItemRefs.value
+          .find(ref => ref.$el === targetEl);
+
+      if (component?.startAnimation) {
+        component.startAnimation();
+      }
+    },
+    onComplete() {
+      gsap.set(experienceItemRefs.value.map(x => x.$el), { clearProps: 'transform' });
+    },
+  });
+
+  staggerFadeInUp(projectItemRefs.value.map(x => x.$el), {
+    yDistance: 30,
+    duration: 0.5,
+    scroll: true,
+    onStart() {
+      const targetEl = this.targets()[0];
+      const component
+        = projectItemRefs.value
+          .find(ref => ref.$el === targetEl);
+
+      if (component?.startAnimation) {
+        component.startAnimation();
+      }
+    },
+    onComplete() {
+      gsap.set(projectItemRefs.value.map(x => x.$el), { clearProps: 'transform' });
+    },
+  });
+
+  staggerFadeInUp(contactItemRefs.value, {
+    start: 'top 85%',
+    yDistance: 30,
+    duration: 0.5,
+    scroll: true,
+    onComplete() {
+      gsap.set(contactItemRefs.value, { clearProps: 'transform' });
+    },
+  });
+
+  staggerFadeInUp(copyItemRefs.value, {
+    start: 'top 95%',
+    yDistance: 30,
+    duration: 0.5,
+    scroll: true,
+  });
+});
 </script>
+
+<style scoped>
+.link {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* Анимация только для устройств с мышкой */
+@media (hover: hover) {
+  .link:hover {
+    /* scale: 1.02 + y: -8px */
+    transform: translateY(-8px) scale(1.1);
+  }
+}
+
+/* Эффект при нажатии (для мобилок и десктопа) */
+.link:active {
+  transform: translateY(-8px) scale(1.1);
+  transition-duration: 0.4s;
+}
+</style>
