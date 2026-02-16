@@ -103,11 +103,15 @@ export function useAnimation() {
       });
     }
     else {
-      gsap.from(
+      gsap.fromTo(
         elements,
         {
           y: yDistance,
           opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
           duration,
           delay,
           stagger: {

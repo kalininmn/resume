@@ -1,6 +1,6 @@
 <template>
   <div class="text-left">
-    <div class="text-2xl lg:text-3xl font-bold text-[#3A7BFF]">
+    <div class="text-3xl font-bold text-[#3A7BFF]">
       <span class="conter">{{ displayValue }}</span>
       <span>{{ prefix }}</span>
     </div>

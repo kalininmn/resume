@@ -57,10 +57,10 @@
         <Link :ref="el => setElement(el, 1, contactItemRefs)" :icon="GithubIcon" text="GitHub" class="link" />
         <Link :ref="el => setElement(el, 2, contactItemRefs)" :icon="TelegramIcon" text="Telegram" class="link" />
       </div>
-      <p :ref="el => copyItemRefs[0] = el" class="block text-center text-[#A3A3A3]">
+      <p :ref="el => copyItemRefs[0] = el" class="block text-center text-xs text-[#A3A3A3]">
         © 2025 Kalinin MN. Все права защищены.
       </p>
-      <p :ref="el => copyItemRefs[1] = el" class="block text-center text-[#A3A3A3]">
+      <p :ref="el => copyItemRefs[1] = el" class="block text-center text-xs text-[#A3A3A3]">
         Design by <a class="underline" href="#">Lazsido</a>
       </p>
     </div>

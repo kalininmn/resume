@@ -1,9 +1,23 @@
 <template>
   <div class="w-full text-center">
-    <span ref="titleRef" class="block text-3xl text-[#FAFAFA] mb-2">
+    <span
+      ref="titleRef"
+      class="
+      block
+      mb-1
+      font-semibold
+      text-[#fafafa]
+      text-4xl
+      "
+    >
       {{ props.title }}
     </span>
-    <span ref="subTitleRef" class="block text-[#A3A3A3]">{{ props.description }}</span>
+    <span
+      ref="subTitleRef"
+      class="text-base text-[#A3A3A3]"
+    >
+      {{ props.description }}
+    </span>
   </div>
 </template>
 
