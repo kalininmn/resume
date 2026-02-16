@@ -1,9 +1,9 @@
 <template>
   <div class="photo">
-    <div class="photo__wrapper w-[140px] h-[140px] lg:w-[200px] lg:h-[200px]">
+    <div class="photo__wrapper">
       <img
         class="w-full h-full object-cover object-center rounded-3xl"
-        src="/photo.jpeg"
+        src="/IMG_1760 (2).jpeg"
         alt=""
       >
     </div>
@@ -17,51 +17,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(var(--size) + (var(--size)*.5) * 2);
-  height: calc(var(--size) + (var(--size)*.2) * 2);
-  --size: 140px;
-  @media (min-width: 1024px) {
-    --size: 200px;
+  // width: calc(var(--size) + (var(--size)*.75) * 2);
+  // height: calc(var(--size) + (var(--size)*.2) * 2);
+  --size: calc(100vw - 40px);
+  width: var(--size);
+  height: var(--size);
+  // height: var(--size);
+  // --width: calc(var(--size) + ((var(--size) * .75) * 2));
+  // --height: calc(var(--size) + ((var(--size) * .70) * 2));
+  // width: calc(hypot(var(--width), var(--height)) / 2);
+  // height: calc(hypot(var(--width), var(--height)) / 2);
+
+  @media (min-width: 768px) {
+    --size: 380px;
   }
 }
-// .photo__wrapper {
-//   position: relative;
-//   &::before,
-//   &::after {
-//     position: absolute;
-//     z-index: -1;
-//     content: "";
-//     // width: 325px;
-//     // height: 275px;
-//     width: 100%;
-//     height: 75%;
-//     opacity: 0.5;
-//     border-radius: 50%;
-//     backdrop-filter: blur(400px);
-//   }
-//   &::before {
-//     top: 30%;
-//     right: 50%;
-//     transform: rotate(-17.46deg);
-
-//     background: linear-gradient(
-//       180deg,
-//       rgba(58, 123, 255, 0.5) 0%,
-//       rgba(151, 25, 251, 0.25) 100%
-//     );
-//   }
-//   &::after {
-//     bottom: 30%;
-//     left: 50%;
-//     background: linear-gradient(
-//       180deg,
-//       rgba(58, 123, 255, 0.5) 0%,
-//       rgba(151, 25, 251, 0.25) 100%
-//     );
-//   }
-// }
 .photo__wrapper {
   position: relative;
+  width: 70%;
+  height: 70%;
+  // width: var(--size);
+  // height: var(--size);
   z-index: 1; // Чтобы контент был сверху
 
   &::before,
@@ -71,8 +47,8 @@
     content: "";
     width: 100%;
     height: 75%;
-    opacity: 0.6;
-    filter: blur(100px); // Чрезмерный блюр (400px) может "съесть" градиент
+    // opacity: .6;
+    filter: blur(50px); // Чрезмерный блюр (400px) может "съесть" градиент
 
     // Начальная форма (слегка неровный овал)
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
@@ -87,13 +63,13 @@
   }
 
   &::before {
-    top: 30%;
-    right: 50%;
+    bottom: -10%;
+    left: -10%;
   }
 
   &::after {
-    bottom: 30%;
-    left: 50%;
+    top: -10%;
+    right: -10%;
     animation-duration: 10s, 25s; // Разная скорость для эффекта хаоса
     animation-direction: alternate-reverse, reverse;
   }

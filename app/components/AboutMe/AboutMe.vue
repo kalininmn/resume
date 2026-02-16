@@ -13,7 +13,7 @@
   >
     <div class="md:max-w-sm lg:max-w-md">
       <StatusBadge ref="bage" class="mb-5" opened />
-      <p ref="ami" class="mb-2 text-sm lg:text-base text-[#A3A3A3]">
+      <p ref="ami" class="mb-2 text-base text-[#A3A3A3]">
         Привет, меня зовут <span class="text-[#fafafa]">Максим Калинин</span>
       </p>
       <span
@@ -23,13 +23,11 @@
         mb-1
         font-semibold
         text-[#fafafa]
-        text-xl
-        md:text-3xl
-        lg:text-4xl"
+        text-4xl"
       >
         Senior Frontend Developer
       </span>
-      <span ref="jobdesc" class="inline-block text-sm lg:text-base text-[#A3A3A3]">
+      <span ref="jobdesc" class="inline-block text-base text-[#A3A3A3]">
         Специализируюсь на разработке масштабируемых<br class="hidden">
         веб-приложений для финансового сектора. Опыт<br class="hidden">
         создания высоконагруженных систем с более чем 44k<br class="hidden">
@@ -62,7 +60,7 @@
       </div>
     </div>
 
-    <MePhoto ref="photoRef" class="order-first md:order-last md:mb-0" />
+    <MePhoto ref="photoRef" class="order-first mb-12 md:order-last md:mb-0" />
   </div>
 </template>
 
