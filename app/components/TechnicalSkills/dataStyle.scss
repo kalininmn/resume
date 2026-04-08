@@ -1,0 +1,295 @@
+.html {
+	background-color: #dc4a25;
+	color: #f7f7f7;
+}
+.gsap {
+	background-color: #0e0f0f;
+	color: #0edd46;
+}
+.lodash {
+	background-color: #338df6;
+	color: #121212;
+}
+.luxon {
+	background-color: #f7f7f7;
+	color: #027fac;
+}
+.sql {
+	background-color: #f7f7f7;
+	color: #d8691f;
+}
+.api {
+	background-color: #800199;
+	color: #f7f7f7;
+}
+.restapi {
+	background-color: #800199;
+	color: #f7f7f7;
+}
+.websocket {
+	background-color: #eceef0;
+	color: #121212;
+}
+.mpa {
+	background-color: #fa7e7e;
+	color: #f7f7f7;
+}
+.spa {
+	background-color: #6db5df;
+	color: #f7f7f7;
+}
+.ssr {
+	background: linear-gradient(to right, #e76e2e 50%, #e2372a 100%);
+	color: #121212;
+}
+.ssdlc {
+	background: linear-gradient(to right, #1c97be 10%, #f4b416 100%);
+	color: #f7f7f7;
+}
+.bem {
+	background-color: #ed4546;
+	color: #efbb1c;
+}
+.agile {
+	background: linear-gradient(to right, #f27049 50%, #f0434f 100%);
+	color: #f7f7f7;
+}
+.vds {
+	background-color: #0e5df7;
+	color: #f7f7f7;
+}
+.vps {
+	background-color: #0e5df7;
+	color: #f7f7f7;
+}
+.kuber {
+	background-color: #3069dd;
+	color: #f7f7f7;
+}
+.github {
+	background-color: #f7f7f7;
+	color: #0e1016;
+}
+.white {
+	background-color: white;
+	color: red;
+}
+.vue {
+	background-color: #35495e;
+	color: #42b883;
+	// box-shadow: 0 0 3px 1px currentColor;
+}
+.vuelidate {
+	background-color: #35495e;
+	color: #42b883;
+	// box-shadow: 0 0 3px 1px currentColor;
+}
+.vuetify {
+	background-color: rgba(33, 148, 243, 0.6);
+	color: #2194f3;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.pinia {
+	background-color: #50ad59;
+	color: #ffc73b;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.casl {
+	background-color: #fff;
+	color: #000;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.css {
+	background-color: #27a3d9;
+	color: #fff;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.scss {
+	background-color: #c76395;
+	color: #fff;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.js {
+	background-color: #f7de1e;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.ts {
+	background-color: #3178c6;
+	color: #fff;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.jsx {
+	background: linear-gradient(0.3turn, #eed849 55%, #8651a3 45%);
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+// .jsx:first-child {
+//   color: #2e302d;
+//   // font-weight: 500;
+// }
+// .jsx:last-child {
+//   padding-left: 5px;
+// }
+.tsx {
+	background: linear-gradient(0.3turn, #3178c6 55%, #8651a3 45%);
+	color: #fff;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+// .tsx:first-child {
+//   color: #2e302d;
+// }
+// .tsx:last-child {
+//   padding-left: 5px;
+// }
+.webpack {
+	background-color: #1a75bb;
+	color: #8acff3;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.vite {
+	background: linear-gradient(100deg, #56aff8, #9d57f7);
+	// background-color: #9d57f7;
+	color: #f8c420;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.git {
+	background-color: #eb4d31;
+	// color: #3f2e00;
+	color: #fff;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.gitlab {
+	background:
+		linear-gradient(to bottom, #db4127 40%, transparent 60%),
+		linear-gradient(to right, #f5680d 20%, transparent 60%),
+		linear-gradient(to left, #f5680d 20%, transparent 60%),
+		linear-gradient(to top, #f89a1a 40%, transparent 60%);
+	color: #fff;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.docker {
+	background-color: #1d60e7;
+	color: #f8f8f8;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.cicd {
+	background: linear-gradient(0.3turn, #f86405 44%, #f8a30d 44%);
+	// background-color: #1a75bb;
+	color: #fff;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.nodejs {
+	background: linear-gradient(0.3turn, #73af5b 40%, #3b813b 60%);
+	// background-color: #1a75bb;
+	color: #333333;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.expressjs {
+	background: linear-gradient(0.3turn, #73af5b 40%, #3b813b 60%);
+	// background-color: #1a75bb;
+	color: #333333;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.postgresql {
+	background-color: #32648d;
+	color: #f8f8f8;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.mongodb {
+	background: linear-gradient(0.3turn, #0ea54d 40%, #118e4d 60%);
+	color: #20303a;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.mysql {
+	background: linear-gradient(90deg, #00728b 43%, #eb8d0f 43%);
+	// color: #20303a;
+	color: #f8f8f8;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.redis {
+	background: linear-gradient(#d22b1e 30%, #9f1d0f 70%);
+	// color: #20303a;
+	color: #f8f8f8;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.nginx {
+	// background: linear-gradient(#d22b1e 30%, #9f1d0f 70%);
+	background-color: #009139;
+	// color: #20303a;
+	color: #f7f7f7;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.sequelize {
+	background: linear-gradient(90deg, #00abe9 10%, #2276b8 40%, #2d3e67);
+	// background-color: #009139;
+	// color: #20303a;
+	color: #f7f7f7;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.figma {
+	background: linear-gradient(
+		to right,
+		#f24e1e 20%,
+		#ff7262 40%,
+		#a259ff 60%,
+		#1abcfe 80%,
+		#0acf83
+	);
+	// background-color: #009139;
+	// color: #20303a;
+	color: #f7f7f7;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.vault {
+	background-color: #ffd814;
+	// color: #20303a;
+	color: #000000;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.harbor {
+	background: linear-gradient(90deg, #5db13d, #52a432);
+	// background-color: #52a432;
+	// color: #20303a;
+	color: #f3f5f8;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.passwork {
+	background-color: #2c82c9;
+	// color: #20303a;
+	color: #ffffff;
+	// font-weight: 500;
+	// box-shadow: 0px 0px 3px 1px currentColor;
+}
+.zabbix {
+	background-color: #ce0200;
+	color: #f7f7f7;
+}
+.netbox {
+	background-color: #1a1a1a;
+	color: #f7f7f7;
+}
+.ones {
+	background-color: #f7d003;
+	color: #f4141a;
+}
+.victoriametrics {
+	background-color: #1a1a1a;
+	color: #f7f7f7;
+}

@@ -2,9 +2,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-  ],
+  modules: [],
   ssr: false,
   devtools: { enabled: true },
   css: ['./app/assets/css/main.css'],
@@ -15,13 +13,7 @@ export default defineNuxtConfig({
     ],
   },
 
-  // alias: {
-  //   '@': '/<rootDir>/app',
-  // },
-
-  eslint: {
-    config: {
-      stylistic: true,
-    },
+  alias: {
+    '@common': '../app/components/common',
   },
 });

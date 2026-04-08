@@ -1,25 +1,12 @@
 <template>
-  <div :class="classes">
-    {{ props.label }}
-  </div>
+	<div class="w-fit py-1 px-4 rounded-lg text-base">
+		{{ label }}
+	</div>
 </template>
 
-<script setup>
-const props = defineProps({
-  label: { type: String, default: '' },
-  class: { type: String, default: '' },
-});
-
-const classes = computed(() => [
-  'w-fit',
-  'py-1',
-  'px-4',
-  'rounded-lg',
-  props.class,
-  'text-base',
-]);
+<script setup lang="ts">
+type Props = {
+	label: string;
+}
+const { label } = defineProps<Props>();
 </script>
-
-<style>
-  
-</style>

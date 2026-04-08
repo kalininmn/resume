@@ -1,24 +1,12 @@
 <template>
-  <div class="w-full text-center">
-    <span
-      ref="titleRef"
-      class="
-      block
-      mb-1
-      font-semibold
-      text-[#fafafa]
-      text-4xl
-      "
-    >
-      {{ props.title }}
-    </span>
-    <span
-      ref="subTitleRef"
-      class="text-base text-[#A3A3A3]"
-    >
-      {{ props.description }}
-    </span>
-  </div>
+	<div class="w-full text-center">
+		<span ref="titleRef" class="block mb-1 font-semibold text-[#fafafa] text-4xl">
+			{{ props.title }}
+		</span>
+		<span ref="subTitleRef" class="text-base text-[#A3A3A3]">
+			{{ props.description }}
+		</span>
+	</div>
 </template>
 
 <script setup lang="ts">
@@ -31,16 +19,16 @@ gsap.registerPlugin(CustomEase);
 CustomEase.create('myEase', '0.22, 1, 0.36, 1');
 
 const props = withDefaults(
-  defineProps<{
-    title?: string;
-    description?: string;
-    refName?: string;
-  }>(),
-  {
-    title: '',
-    description: '',
-    refName: '',
-  },
+	defineProps<{
+		title?: string;
+		description?: string;
+		refName?: string;
+	}>(),
+	{
+		title: '',
+		description: '',
+		refName: '',
+	},
 );
 
 const titleRef = useTemplateRef('titleRef');
@@ -48,29 +36,32 @@ const subTitleRef = useTemplateRef('subTitleRef');
 // const containerRef = useTemplateRef('containerRef');
 
 onMounted(() => {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: titleRef.value, // Триггер — сам контейнер группы
-      start: 'top 85%', // Анимация начнется, когда верх контейнера дойдет до 85% высоты экрана
-      toggleActions: 'play none none none', // Проиграть один раз
-    },
-  });
+	const tl = gsap.timeline({
+		scrollTrigger: {
+			trigger: titleRef.value, // Триггер — сам контейнер группы
+			start: 'top 85%', // Анимация начнется, когда верх контейнера дойдет до 85% высоты экрана
+			toggleActions: 'play none none none', // Проиграть один раз
+		},
+	});
 
-  tl.from(titleRef.value, {
-    opacity: 0,
-    y: 50,
-    duration: 1.2,
-    ease: 'myEase',
-  })
-    .from(subTitleRef.value, {
-      opacity: 0,
-      y: 30, // чуть меньше вылет для подзаголовка смотрится лучше
-      duration: 1.2,
-      ease: 'myEase',
-    }, '-=0.8');
+	tl.from(titleRef.value, {
+		opacity: 0,
+		y: 50,
+		duration: 1.2,
+		ease: 'myEase',
+	}).from(
+		subTitleRef.value,
+		{
+			opacity: 0,
+			y: 30, // чуть меньше вылет для подзаголовка смотрится лучше
+			duration: 1.2,
+			ease: 'myEase',
+		},
+		'-=0.8',
+	);
 });
 
 defineExpose({
-  refName: props.refName,
+	refName: props.refName,
 });
 </script>

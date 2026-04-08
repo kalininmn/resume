@@ -1,43 +1,45 @@
 <template>
 	<Card class="card">
 		<CardHeader :title="data.title" :description="data.description">
-			<template #append>
-				<StackBadge :title="data.badgeText" class="stack-bage" />
+			<template #prepend>
+				{{ data.date }}
 			</template>
 		</CardHeader>
 
-		<List ref="listRef" label="Ключевые особенности:" :items="data.achievements" />
+		<span class="block mb-2 text-white">{{ data.contentDescription }}</span>
+		<List ref="listRef" class="mb-3" label="Достижения:" :items="data.achievements" />
 
-		<hr class="my-7 text-[#404040]" />
-
-		<div class="flex flex-wrap -m-1">
+		<div class="flex flex-wrap">
 			<StackBadge
 				v-for="(item, index) in data.stack"
 				:key="index"
-				:ref="(el) => setElement(el, index, itemRefs)"
+				:ref="(el) => setElement(el as ComponentPublicInstance, index, itemRefs)"
+				class="stack-bage mr-2"
 				:title="item"
-				class="m-1 stack-bage"
 			/>
 		</div>
 	</Card>
 </template>
 
 <script setup lang="ts">
+import type { ComponentPublicInstance } from 'vue';
+
 import gsap from 'gsap';
 import { useRefs } from '@/composables/useRefs';
 
-import Card from './Common/Card.vue';
-import CardHeader from './Common/CardHeader.vue';
-import StackBadge from './Common/StackBadge.vue';
-import List from './Common/List.vue';
+import Card from '@common/Card.vue';
+import CardHeader from '@common/CardHeader.vue';
+import List from '@common/List.vue';
+import StackBadge from '@common/StackBadge.vue';
 
 const { setElement } = useRefs();
 
 defineProps<{
 	data: {
-		badgeText?: string;
 		title?: string;
 		description?: string;
+		date?: string;
+		contentDescription?: string;
 		achievements?: Array<{ icon: string; text: string }>;
 		stack?: string[];
 	};
@@ -75,22 +77,21 @@ defineExpose({
 </script>
 
 <style>
-.stack-bage {
-	transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+.card {
+	transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 	will-change: transform;
 }
 
 /* Анимация только для устройств с мышкой */
 @media (hover: hover) {
-	.stack-bage:hover {
-		/* scale: 1.02 + y: -8px */
-		transform: translateY(-2px) scale(1.1);
+	.card:hover {
+		transform: translateY(-8px) scale(1.02);
 	}
 }
 
 /* Эффект при нажатии (для мобилок и десктопа) */
-.stack-bage:active {
-	transform: translateY(-2px) scale(1.1);
-	transition-duration: 0.4s;
+.card:active {
+	transform: translateY(-4px) scale(1.01);
+	transition-duration: 0.2s;
 }
 </style>

@@ -1,33 +1,33 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @layer base {
-  @font-face {
-    font-family: "inter-variable";
-    src: url("../fonts/Inter-Variable.ttf");
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-  }
+	@font-face {
+		font-family: 'inter-variable';
+		src: url('../fonts/Inter-Variable.ttf');
+		font-weight: 100 900;
+		font-style: normal;
+		font-display: swap;
+	}
 }
 
 @theme {
-  --font-sans: inter-variable;
+	--font-sans: inter-variable;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
 }
 body {
-  padding: 20px 20px 20px;
-  /* padding: 20px 80px 80px; */
-  background-color: #000615;
-  @media (min-width: 768px) {
-    margin: 20px 40px 40px;
-  }
-  @media (min-width: 1280px) {
-    margin: 20px 80px 80px;
-  }
+	padding: 20px 20px 20px;
+	/* padding: 20px 80px 80px; */
+	background-color: #000615;
+	@media (min-width: 768px) {
+		margin: 20px 40px 40px;
+	}
+	@media (min-width: 1280px) {
+		margin: 20px 80px 80px;
+	}
 }
 
 /* span {
