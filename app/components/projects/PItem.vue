@@ -1,35 +1,11 @@
-<template>
-	<Card class="card">
-		<CardHeader :title="data.title" :description="data.description">
-			<template #append>
-				<StackBadge :title="data.badgeText" class="stack-bage" />
-			</template>
-		</CardHeader>
-
-		<List ref="listRef" label="Ключевые особенности:" :items="data.achievements" />
-
-		<hr class="my-7 text-[#404040]" />
-
-		<div class="flex flex-wrap -m-1">
-			<StackBadge
-				v-for="(item, index) in data.stack"
-				:key="index"
-				:ref="(el) => setElement(el, index, itemRefs)"
-				:title="item"
-				class="m-1 stack-bage"
-			/>
-		</div>
-	</Card>
-</template>
-
 <script setup lang="ts">
 import gsap from 'gsap';
 import { useRefs } from '@/composables/useRefs';
 
-import Card from './Common/Card.vue';
-import CardHeader from './Common/CardHeader.vue';
-import StackBadge from './Common/StackBadge.vue';
-import List from './Common/List.vue';
+import Card from '@common/Card.vue';
+import CardHeader from '@common/CardHeader.vue';
+import StackBadge from '@common/StackBadge.vue';
+import List from '@common/List.vue';
 
 const { setElement } = useRefs();
 
@@ -73,6 +49,30 @@ defineExpose({
 	startAnimation,
 });
 </script>
+
+<template>
+	<Card class="card">
+		<CardHeader :title="data.title" :description="data.description">
+			<template #append>
+				<StackBadge :title="data.badgeText" class="stack-bage" />
+			</template>
+		</CardHeader>
+
+		<List ref="listRef" label="Ключевые особенности:" :items="data.achievements" />
+
+		<hr class="my-7 text-[#404040]" />
+
+		<div class="flex flex-wrap -m-1">
+			<StackBadge
+				v-for="(item, index) in data.stack"
+				:key="index"
+				:ref="(el) => setElement(el, index, itemRefs)"
+				:title="item"
+				class="m-1 stack-bage"
+			/>
+		</div>
+	</Card>
+</template>
 
 <style>
 .stack-bage {

@@ -1,23 +1,22 @@
 <script setup lang="ts">
-import type { ComponentPublicInstance } from 'vue';
 import gsap from 'gsap';
-import EItem from './EItem.vue';
+import PItem from './PItem.vue';
 import { items } from './data';
 
 const { setInstOfElement } = useRefs();
 const { staggerFadeInUp } = useAnimation();
-const experienceItemRefs = ref([]);
+const projectItemRefs = ref([]);
 
 onMounted(() => {
 	staggerFadeInUp(
-		experienceItemRefs.value.map((x) => x.$el),
+		projectItemRefs.value.map((x) => x.$el),
 		{
 			yDistance: 30,
 			duration: 0.5,
 			scroll: true,
 			onStart() {
 				const targetEl = this.targets()[0];
-				const component = experienceItemRefs.value.find((ref) => ref.$el === targetEl);
+				const component = projectItemRefs.value.find((ref) => ref.$el === targetEl);
 
 				if (component?.startAnimation) {
 					component.startAnimation();
@@ -25,7 +24,7 @@ onMounted(() => {
 			},
 			onComplete() {
 				gsap.set(
-					experienceItemRefs.value.map((x) => x.$el),
+					projectItemRefs.value.map((x) => x.$el),
 					{ clearProps: 'transform' },
 				);
 			},
@@ -35,11 +34,12 @@ onMounted(() => {
 </script>
 
 <template>
-	<e-item
-		v-for="(item, index) in items"
-		:key="index"
-		:ref="(el) => setInstOfElement(el as ComponentPublicInstance, index, experienceItemRefs)"
-		:data="item"
-		:class="index < items.length - 1 ? 'mb-5' : 'mb-25'"
-	/>
+	<div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] mb-23.5">
+		<p-item
+			v-for="(item, index) in items"
+			:key="index"
+			:ref="(el) => setInstOfElement(el, index, projectItemRefs)"
+			:data="item"
+		/>
+	</div>
 </template>

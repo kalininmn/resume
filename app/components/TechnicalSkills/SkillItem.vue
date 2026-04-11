@@ -7,6 +7,6 @@
 <script setup lang="ts">
 type Props = {
 	label: string;
-}
+};
 const { label } = defineProps<Props>();
 </script>
