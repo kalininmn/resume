@@ -63,6 +63,7 @@ export function useAnimation() {
 		} = options;
 
 		gsap.set(elements, { opacity: 0 });
+		gsap.set('.gsap-reveal', { visibility: 'visible' });
 
 		if (scroll) {
 			ScrollTrigger.batch(elements, {

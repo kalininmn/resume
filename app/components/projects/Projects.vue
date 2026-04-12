@@ -34,7 +34,7 @@ onMounted(() => {
 </script>
 
 <template>
-	<div class="md:grid md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] mb-23.5">
+	<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-[20px] mb-23.5">
 		<p-item
 			v-for="(item, index) in items"
 			:key="index"

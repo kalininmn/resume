@@ -35,26 +35,30 @@ onMounted(() => {
 		<external-link
 			:ref="(el) => setElement(el, 0, contactItemRefs)"
 			:icon="MailIcon"
+			href="javascript:void(0)"
 			text="Email"
 			class="link"
 		/>
 		<external-link
 			:ref="(el) => setElement(el, 1, contactItemRefs)"
 			:icon="GithubIcon"
+			href="https://github.com/kalininmn"
 			text="GitHub"
 			class="link"
 		/>
 		<external-link
 			:ref="(el) => setElement(el, 2, contactItemRefs)"
 			:icon="TelegramIcon"
+			href="https://t.me/kalininweb"
 			text="Telegram"
 			class="link"
 		/>
 	</div>
 	<p :ref="(el) => (copyItemRefs[0] = el)" class="block text-center text-xs text-[#A3A3A3]">
-		© 2025 Kalinin MN. Все права защищены.
+		© 2026 Kalinin MN. Все права защищены.
 	</p>
 	<p :ref="(el) => (copyItemRefs[1] = el)" class="block text-center text-xs text-[#A3A3A3]">
-		Design by <a class="underline" href="#">Lazsido</a>
+		Design by
+		<a class="underline" target="_blank" rel="noopener" href="https://t.me/lazsido">Lazsido</a>
 	</p>
 </template>

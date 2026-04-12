@@ -30,6 +30,10 @@ body {
 	}
 }
 
+.gsap-reveal {
+  visibility: hidden;
+}
+
 /* span {
   font-size: var(--text-base);
 } */

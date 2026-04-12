@@ -45,9 +45,6 @@
 </template>
 
 <script setup lang="ts">
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-
 import SectionHeader from '@common/SectionHeader.vue';
 import AppHeader from '@/components/header/AppHeader.vue';
 import AboutMe from '@/components/aboutMe/AboutMe.vue';
@@ -55,8 +52,6 @@ import Experience from '@/components/experience/Experience.vue';
 import TechnicalSkills from '@/components/technicalSkills/TechnicalSkills.vue';
 import Projects from '@/components/projects/Projects.vue';
 import AppFooter from '@/components/footer/AppFooter.vue';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const experienceRef = useTemplateRef(Sections.Experience);
 const skillsRef = useTemplateRef(Sections.Skills);
