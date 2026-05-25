@@ -31,7 +31,7 @@ export const items = [
 		stack: ['TypeScript', 'Vue 3', 'Pinia'],
 	},
 	{
-		title: 'Middle developer',
+		title: 'Middle+ developer',
 		description: 'Совкомбанк Технологии',
 		date: 'Февраль 2021 - Август 2025',
 		contentDescription: `Разработка внутренней экосистемы управления ИТ-инфраструктурой

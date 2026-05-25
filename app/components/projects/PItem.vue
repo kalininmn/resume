@@ -62,13 +62,13 @@ defineExpose({
 
 		<hr class="my-7 text-[#404040]" />
 
-		<div class="flex flex-wrap -m-1">
+		<div class="flex flex-wrap gap-2">
 			<StackBadge
 				v-for="(item, index) in data.stack"
 				:key="index"
 				:ref="(el) => setElement(el, index, itemRefs)"
 				:title="item"
-				class="m-1 stack-bage"
+				class="stack-bage"
 			/>
 		</div>
 	</Card>

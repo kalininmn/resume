@@ -9,12 +9,12 @@
 		<span class="block mb-2 text-white">{{ data.contentDescription }}</span>
 		<List ref="listRef" class="mb-3" label="Достижения:" :items="data.achievements" />
 
-		<div class="flex flex-wrap">
+		<div class="flex flex-wrap gap-2">
 			<StackBadge
 				v-for="(item, index) in data.stack"
 				:key="index"
 				:ref="(el) => setElement(el as ComponentPublicInstance, index, itemRefs)"
-				class="stack-bage mr-2"
+				class="stack-bage"
 				:title="item"
 			/>
 		</div>
