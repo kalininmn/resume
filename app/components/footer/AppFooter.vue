@@ -64,7 +64,7 @@ onMounted(() => {
 		/>
 	</div>
 	<p :ref="(el) => (copyItemRefs[0] = el)" class="block text-center text-xs text-[#A3A3A3]">
-		© 2026 Kalinin MN. Все права защищены.
+		© 2026 Max Cusp. Все права защищены.
 	</p>
 	<p :ref="(el) => (copyItemRefs[1] = el)" class="block text-center text-xs text-[#A3A3A3]">
 		Design by
