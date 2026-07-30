@@ -2,8 +2,42 @@ import CheckIcon from '@/assets/icons/check.svg';
 
 export const items = [
 	{
-		title: 'Личный кабинет Рокетбанка',
-		description: '(Web-версия)',
+		title: 'Кредитно Инвестиционный Бизнес, B2B, B2C, B2E',
+		description: 'Банк для бизнеса',
+		badgeText: 'Enterprice',
+		achievements: [
+			{
+				icon: CheckIcon,
+				text: `Миграция монолита на микрофронты.`,
+			},
+			{
+				icon: CheckIcon,
+				text: `Ревью, рефакторинг.`,
+			},
+			{
+				icon: CheckIcon,
+				text: `Проработка тех-долга, разработка бизнес-фич.`,
+			},
+		],
+		stack: [
+			'React',
+			'Yup',
+			'React-hook-form',
+			'Tanstack Query',
+			'Tanstack Router',
+			'Zustand',
+			'Typescript',
+			'Module Federation',
+			'Vitest',
+			'Webpack',
+			'Vite',
+			'SCSS',
+			'SSDLC',
+		],
+	},
+	{
+		title: 'Рокетбанк, B2C',
+		description: 'Мобильный банк',
 		badgeText: 'Enterprice',
 		achievements: [
 			{
@@ -19,12 +53,12 @@ export const items = [
 				text: `Интеграция партнерских модулей без ущерба для UI/UX.`,
 			},
 		],
-		stack: ['Vue 3', 'Pinia', 'JavaScript', 'TypeScript', 'Vitest', 'SSDLC', 'CSS3'],
+		stack: ['Vue 3', 'Pinia', 'TypeScript', 'Vitest', 'Vite', 'SSDLC', 'CSS3'],
 	},
 	{
-		title: 'Полимебель',
-		description: 'B2B-платформа для оптовых закупок фурнитуры',
-		badgeText: 'Enterprice',
+		title: 'Полимебель, B2B, B2E',
+		description: 'Платформа для оптовых закупок фурнитуры',
+		badgeText: 'Mid-Market',
 		achievements: [
 			{
 				icon: CheckIcon,
@@ -55,8 +89,8 @@ export const items = [
 		],
 	},
 	{
-		title: 'Внутренняя экосистема управления ИТ-инфраструктурой',
-		description: 'Замена Pyrus и Confluence',
+		title: 'IT-Landscape, B2E',
+		description: 'Экосистема управления ИТ-инфраструктурой',
 		badgeText: 'Enterprice',
 		achievements: [
 			{
@@ -82,6 +116,8 @@ export const items = [
 			'Pinia',
 			'JavaScript',
 			'TypeScript',
+			'Webpack',
+			'Vite',
 			'VictoriaMetrics',
 			'Zabbix',
 			'Netbox',

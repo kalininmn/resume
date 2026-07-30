@@ -15,6 +15,7 @@ const jobdesc = useTemplateRef('jobdesc');
 const years = useTemplateRef('years');
 const users = useTemplateRef('users');
 const systems = useTemplateRef('systems');
+const employers = useTemplateRef('employers');
 const photoRef = useTemplateRef('photoRef');
 
 onMounted(() => {
@@ -32,13 +33,14 @@ onMounted(() => {
 			years.value.$el,
 			users.value.$el,
 			systems.value.$el,
+			employers.value.$el,
 		],
 		{
 			yDistance: 30,
 			duration: 0.6,
 			onStart() {
 				const targetEl = this.targets()[0];
-				const component = [years.value, users.value, systems.value].find(
+				const component = [years.value, users.value, systems.value, employers.value].find(
 					(ref) => ref.$el === targetEl,
 				);
 
@@ -70,10 +72,11 @@ onMounted(() => {
 				и TypeScript, имею опыт Fullstack-разработки.
 			</span>
 
-			<div class="flex justify-between mt-6">
-				<AnimatedCounter ref="years" class="md:mr-4 gsap-reveal" :sum="7" prefix=" +" title="Лет опыта" />
-				<AnimatedCounter ref="users" class="md:mr-4 gsap-reveal" :sum="44" prefix="к +" title="Пользователей" />
+			<div class="flex flex-wrap justify-between mt-6 gap-4">
+				<AnimatedCounter ref="years" class="gsap-reveal" :sum="8" prefix=" +" title="Лет опыта" />
+				<AnimatedCounter ref="users" class="gsap-reveal" :sum="44" prefix="к +" title="Пользователей" />
 				<AnimatedCounter ref="systems" class="gsap-reveal" :sum="1500" prefix="к +" title="Систем" />
+				<AnimatedCounter ref="employers" class="gsap-reveal" :sum="200" prefix=" +" title="Человек в команде" />
 			</div>
 		</div>
 

@@ -4,6 +4,7 @@ import ExternalLink from '~/components/common/ExternalLink.vue';
 import MailIcon from '@/assets/icons/mail.svg';
 import GithubIcon from '@/assets/icons/github.svg';
 import TelegramIcon from '@/assets/icons/telegram.svg';
+import InstagramIcon from '@/assets/icons/instagram.svg';
 
 const { setElement } = useRefs();
 const { staggerFadeInUp } = useAnimation();
@@ -35,7 +36,7 @@ onMounted(() => {
 		<external-link
 			:ref="(el) => setElement(el, 0, contactItemRefs)"
 			:icon="MailIcon"
-			href="javascript:void(0)"
+			href="mailto:maxcusp@yandex.ru"
 			text="Email"
 			class="link"
 		/>
@@ -53,12 +54,20 @@ onMounted(() => {
 			text="Telegram"
 			class="link"
 		/>
+		<external-link
+			:ref="(el) => setElement(el, 3, contactItemRefs)"
+			:icon="InstagramIcon"
+			href="https://instagram.com/maxcusp"
+			text="Instagram"
+			sub-text="Запрещен в РФ"
+			class="link"
+		/>
 	</div>
 	<p :ref="(el) => (copyItemRefs[0] = el)" class="block text-center text-xs text-[#A3A3A3]">
 		© 2026 Kalinin MN. Все права защищены.
 	</p>
 	<p :ref="(el) => (copyItemRefs[1] = el)" class="block text-center text-xs text-[#A3A3A3]">
 		Design by
-		<a class="underline" target="_blank" rel="noopener" href="https://t.me/lazsido">Lazsido</a>
+		<a class="underline" target="_blank" rel="noopener" href="https://instagram.com/lazsido">Lazsido</a>
 	</p>
 </template>

@@ -4,9 +4,44 @@ export const items = [
 	{
 		title: 'Senior developer',
 		description: 'Совкомбанк Технологии',
-		date: 'Август 2025 - Декабрь 2025',
-		contentDescription: `Работа над высоконагруженным SPA «Рокетбанк, личный кабинет (Web-версия)»
-    с фокусом на производительность и сложные UI-анимации.`,
+		date: 'Май 2026 - *',
+		contentDescription: `Банк для бизнеса, B2B, B2C, B2E`,
+		achievements: [
+			{
+				icon: CheckIcon,
+				text: `Оптимизировал логику оформления депозитов для среднего и крупного бизнеса`,
+			},
+			{
+				icon: CheckIcon,
+				text: `Изучил новый стек.`,
+			},
+			{
+				icon: CheckIcon,
+				text: `Быстро влился в процессы команды.`,
+			},
+		],
+		stack: [
+			'React',
+			'Yup',
+			'React-hook-form',
+			'Tanstack Query',
+			'Tanstack Router',
+			'Zustand',
+			'Typescript',
+			'Module Federation',
+			'Vitest',
+			'Webpack',
+			'Vite',
+			'SCSS',
+			'SSDLC',
+		],
+	},
+	{
+		title: 'Senior developer',
+		description: 'Совкомбанк Технологии',
+		date: 'Август 2025 - Май 2026',
+		contentDescription: `Работа над высоконагруженным SPA «Рокетбанк»
+    с фокусом на производительность и сложные UI-анимации, B2C`,
 		achievements: [
 			{
 				icon: CheckIcon,
@@ -27,16 +62,23 @@ export const items = [
 				icon: CheckIcon,
 				text: `Реализовал интеграцию партнёрских виджетов (чат поддержки).`,
 			},
+			{
+				icon: CheckIcon,
+				text: `Выполнили OKR по использованию ИИ.`,
+			},
+			{
+				icon: CheckIcon,
+				text: `Выполнили OKR по Time To Market.`,
+			},
 		],
-		stack: ['TypeScript', 'Vue 3', 'Pinia'],
+		stack: ['Vue 3', 'Pinia', 'TypeScript', 'Vitest', 'Vite', 'SSDLC', 'CSS3'],
 	},
 	{
 		title: 'Middle+ developer',
 		description: 'Совкомбанк Технологии',
 		date: 'Февраль 2021 - Август 2025',
-		contentDescription: `Разработка внутренней экосистемы управления ИТ-инфраструктурой
-    (замена Pyrus и Confluence). 
-    Система агрегирует данные из 1500+ систем банка, 44 000+ пользователей.`,
+		contentDescription: `Разработка внутренней экосистемы управления ИТ-инфраструктурой. 
+    Система агрегирует данные из 1500+ систем банка, 44 000+ пользователей, B2E`,
 		achievements: [
 			{
 				icon: CheckIcon,
@@ -54,28 +96,37 @@ export const items = [
 				icon: CheckIcon,
 				text: `Менторство, проведение Code Review, внедрение практик SSDLC в CI/CD.`,
 			},
+			{
+				icon: CheckIcon,
+				text: `Выполнили OKR по использованию ИИ.`,
+			},
+			{
+				icon: CheckIcon,
+				text: `Выполнили OKR по внедрению безопасных способов разработки.`,
+			},
 		],
 		stack: [
-			'JavaScript',
 			'Vue 2',
+			'Vue 3',
 			'Vuetify',
-			'Vuelidate',
 			'Vuex',
+			'Pinia',
+			'JavaScript',
+			'TypeScript',
+			'Webpack',
+			'Vite',
+			'VictoriaMetrics',
+			'Zabbix',
+			'Netbox',
 			'CASL',
-			'Luxon',
-			'Lodash',
-			'Node.js',
-			'Express.js',
-			'Keycloack',
-			'Memcached',
-			'CI/CD (SSDLC)',
+			'SSDLC',
 		],
 	},
 	{
 		title: 'Middle developer',
-		description: 'Полимебель',
+		description: 'Полимебель, B2B, B2E',
 		date: 'Октябрь 2017 - Февраль 2021',
-		contentDescription: `Разработка и поддержка интернет-магазина (B2B) и внутренней системы управления заказами.`,
+		contentDescription: `Разработка и поддержка B2B магазина и внутренней системы управления заказами.`,
 		achievements: [
 			{
 				icon: CheckIcon,
@@ -102,6 +153,19 @@ export const items = [
         Развернул кластер Kubernetes (K8S) с разделением на Staging/Production среды.`,
 			},
 		],
-		stack: ['TypeScript', 'SSR (custom)', 'Node.js', 'PostgreSQL', 'K8S', 'NGINX'],
+		stack: [
+			'TypeScript',
+			'SSR (custom)',
+			'SCSS',
+			'Node.js',
+			'Express.js',
+			'Sequelize',
+			'PostgreSQL',
+			'K8S',
+			'Docker',
+			'NGINX',
+			'VDS',
+			'Figma',
+		],
 	},
 ];
