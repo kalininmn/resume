@@ -67,7 +67,7 @@ onMounted(() => {
 				Senior Frontend Developer
 			</span>
 			<span ref="jobdesc" class="inline-block text-base text-[#A3A3A3] gsap-reveal">
-				Разрабатываю высоконагруженные веб-приложения.<br />
+				Разрабатываю высоконагруженные веб-приложения.
 				Специализируюсь на&nbsp;сложных структурах данных и&nbsp;архитектурных решениях.<br />
 				Использую Vue, React, Typescript.<br />
 				+&nbsp;Fullstack: Node.js, Deploy.
