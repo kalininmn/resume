@@ -67,9 +67,10 @@ onMounted(() => {
 				Senior Frontend Developer
 			</span>
 			<span ref="jobdesc" class="inline-block text-base text-[#A3A3A3] gsap-reveal">
-				Разрабатываю высоконагруженные SPA и внутренние экосистемы управления ИТ-инфраструктурой.<br />
-				Специализируюсь на сложных структурах данных и архитектурных решениях с использованием Vue 3
-				и TypeScript, имею опыт Fullstack-разработки.
+				Разрабатываю высоконагруженные веб-приложения.<br />
+				Специализируюсь на&nbsp;сложных структурах данных и&nbsp;архитектурных решениях.<br />
+				Использую Vue, React, Typescript.<br />
+				+&nbsp;Fullstack: Node.js, Deploy.
 			</span>
 
 			<div class="flex flex-wrap justify-between mt-6 gap-4">

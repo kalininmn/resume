@@ -4,7 +4,7 @@
 	>
 		<img class="mr-[4px]" size="10" :src="StarIcon" />
 		<span class="font-medium text-xs">{{
-			opened ? 'Открыт для предлоежний' : 'Закрыт для предложений'
+			opened ? 'Открыт для предложений' : 'Закрыт для предложений'
 		}}</span>
 	</div>
 </template>

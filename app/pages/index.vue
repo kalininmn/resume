@@ -9,7 +9,7 @@
 			:ref-name="Sections.Experience"
 			class="mb-10"
 			title="Опыт работы"
-			description="Профессиональный путь в разработке веб-приложений"
+			description="Профессиональный путь в разработке веб-приложений"
 		/>
 		<experience />
 
@@ -18,7 +18,7 @@
 			:ref-name="Sections.Skills"
 			class="mb-10"
 			title="Технические навыки"
-			description="Широкий спектр современных технологий и инструментов разработки"
+			description="Широкий спектр современных технологий и инструментов разработки"
 		/>
 		<technical-skills class="mb-23.5" />
 
@@ -26,8 +26,8 @@
 			:ref="Sections.Projects"
 			:ref-name="Sections.Projects"
 			class="mb-10"
-			title="Проекты и задачи"
-			description="Ключевые проекты и зоны ответственности"
+			title="Проекты и задачи"
+			description="Ключевые проекты и зоны ответственности"
 		/>
 		<projects />
 
@@ -37,7 +37,7 @@
 				:ref-name="Sections.Contacts"
 				class="mb-10"
 				title="Контакты"
-				description="Открыт для новых проектов и сотрудничества. Свяжитесь со мной для обсуждения проекта."
+				description="Открыт для новых проектов и сотрудничества. Свяжитесь со мной для обсуждения проекта."
 			/>
 			<app-footer />
 		</div>
