@@ -6,7 +6,7 @@
 		@enter="onEnter"
 		@leave="onLeave"
 	>
-		<div :key="activeTab" class="flex flex-wrap gap-2 mx-auto sm:max-w-lg">
+		<div :key="activeTab" class="flex justify-center flex-wrap gap-2 mx-auto sm:max-w-lg">
 			<SkillItem
 				v-for="(item, i) in items"
 				:key="i + activeTab"
